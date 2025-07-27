@@ -1,0 +1,103 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TestData\**" />
+    <EmbeddedResource Remove="TestData\**" />
+    <None Remove="TestData\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests\Test_ADS_NotBuilt.cs" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\ace32.dll" Link="ace32.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\ace64.dll" Link="ace64.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\adscollate.adm" Link="adscollate.adm" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\adscollate.adt" Link="adscollate.adt" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\adsloc32.dll" Link="adsloc32.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\adsloc64.dll" Link="adsloc64.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\adslocal.cfg" Link="adslocal.cfg" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\aicu32.dll" Link="aicu32.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\aicu64.dll" Link="aicu64.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\ansi.chr" Link="ansi.chr" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\axcws32.dll" Link="axcws32.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\axcws64.dll" Link="axcws64.dll" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\extend.chr" Link="extend.chr" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\icudt40l.dat" Link="icudt40l.dat" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include=".\_Assets\Binaries\Advantage\AdvantageProvider\Runtimes\ads.ini" Link="ads.ini" Visible="false">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="Tests\Test_ADS_NotBuilt.cs" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.14.1" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.5.0" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+    <PackageReference Include="Selenium.Support" Version="4.25.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.25.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="130.0.6723.6900" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="AdvantageProvider">
+			<HintPath>.\_Assets\Binaries\Advantage\AdvantageProvider\AdvantageProvider.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

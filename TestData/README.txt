@@ -1,0 +1,1 @@
+Empty folder, but used to contain a test DB
