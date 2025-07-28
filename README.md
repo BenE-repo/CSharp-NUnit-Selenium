@@ -1,8 +1,9 @@
 # CSharp-NUnit-Selenium
-C# / NUnit / Selenium Example Work
+
+Example of previous work using C# / Selenium / NUnit. 
 
 The website under test was (very basically) a CRM-type system for training providers. Applicants would apply for training,
-become learners, and taking courses. This training was done on behalf of organisations, which had officers etc. 
+become learners, and take courses. This training was done on behalf of organisations, which had officers etc. 
 
 - All coded by me, bar the occasional copy 'n' paste from StackOverflow
 - Had to remove some sensitive and important things, so would be very, very surprised if it even compiles now
